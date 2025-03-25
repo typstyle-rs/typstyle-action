@@ -1,0 +1,16 @@
+name: typstyle
+description: GitHub Action to run typstyle, a Typst formatter
+author: Gray Espinoza
+
+branding:
+  icon: align-left
+  color: black
+
+inputs:
+  args:
+    description: CLI arguments to pass to typstyle
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
