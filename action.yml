@@ -7,8 +7,8 @@ branding:
   color: black
 
 inputs:
-  args:
-    description: CLI arguments to pass to typstyle
+  opts:
+    description: CLI options to pass to typstyle
     required: false
 
 runs:

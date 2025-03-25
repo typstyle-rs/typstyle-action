@@ -1,7 +1,4 @@
-#!/bin/bash
-
-set -eu
-shopt -s globstar
+#!/bin/bash -eu
 
 find . -name "*.typ" | xargs typstyle $*
 
