@@ -2,8 +2,12 @@
 GitHub Action to run [typstyle](https://github.com/Enter-tainer/typstyle), a Typst formatter.
 
 ## Usage
-1. Create `typstyle.yml` in `.github/workflows/`
-2. Paste the following into `typstyle.yml`:
+1. Create `.github/workflows/typstyle.yml`
+2. Configure `typstyle.yml` ([see examples](#examples))
+3. Commit and push `typstyle.yml`
+
+### Examples
+The following formats all `.typ` files in the repository on pushes and pull requests, then pushes the changes.
 ```yml
 name: typstyle
 on: [push, pull_request]
@@ -21,13 +25,12 @@ jobs:
     - name: Run typstyle
       uses: grayespinoza/typstyle-action@main
       with:
-        args: --check
+        opts: -i
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:
         commit_message: "Formatted using typstyle"
 ```
-3. Commit and push `typstyle.yml`
 
 ## Reporting Issues
 Please use [GitHub Issues](https://github.com/grayespinoza/typstyle-action/issues) to report bugs, crashes, and other issues.
