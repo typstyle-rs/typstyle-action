@@ -10,6 +10,7 @@ inputs:
   opts:
     description: CLI options to pass to typstyle
     required: false
+    default: -i
 
 runs:
   using: "docker"
