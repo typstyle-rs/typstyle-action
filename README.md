@@ -24,8 +24,6 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: Run typstyle
       uses: grayespinoza/typstyle-action@main
-      with:
-        opts: -i
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:
