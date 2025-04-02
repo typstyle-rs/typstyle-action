@@ -11,6 +11,10 @@ inputs:
     description: CLI options to pass to typstyle
     required: false
     default: -i
+  inputs:
+    description: input files/directories to pass to typstyle
+    required: false
+    default: .
 
 runs:
   using: "docker"
