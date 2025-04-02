@@ -29,6 +29,13 @@ jobs:
       with:
         commit_message: "Formatted using typstyle"
 ```
+The following formats all `.typ` files in `chapters/chapter3/` (located in the root of the repository) and its subdirectories.
+```yml
+- name: Run typstyle
+  uses: grayespinoza/typstyle-action@main
+  with:
+    inputs: chapters/chapter3/
+```
 
 ## Reporting Issues
 Please use [GitHub Issues](https://github.com/grayespinoza/typstyle-action/issues) to report bugs, crashes, and other issues.
