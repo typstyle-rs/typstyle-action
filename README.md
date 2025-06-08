@@ -2,18 +2,21 @@
 GitHub Action to run [typstyle](https://github.com/Enter-tainer/typstyle), a Typst formatter.
 
 ## Usage
-1. Create `.github/workflows/typstyle.yml`
-2. Configure `typstyle.yml` ([see examples](#examples))
-3. Commit and push `typstyle.yml`
+1. Create `.github/workflows/cd.yml`
+2. Configure `cd.yml`
+3. Commit and push `cd.yml`
 
 ### Examples
-The following formats all `.typ` files in the repository on pushes and pull requests, then pushes the changes.
+The following formats all `.typ` files in branch `main` on pushes, then pushes the changes.
+`.github/workflows/cd.yml`
 ```yml
-name: typstyle
-on: [push, pull_request]
+name: CD
+on:
+  push:
+    branches: main
 
 jobs:
-  format:
+  typstyle:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -27,7 +30,7 @@ jobs:
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:
-        commit_message: "Formatted using typstyle"
+        commit_message: "style: format using typstyle"
 ```
 
 ## Reporting Issues
