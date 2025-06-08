@@ -2,15 +2,15 @@
 GitHub Action to run [typstyle](https://github.com/Enter-tainer/typstyle), a Typst formatter.
 
 ## Usage
-1. Create `.github/workflows/cd.yml`
-2. Configure `cd.yml`
-3. Commit and push `cd.yml`
+1. Create `.github/workflows/ci.yml`
+2. Configure `ci.yml`
+3. Commit and push `ci.yml`
 
 ### Examples
 The following formats all `.typ` files in branch `main` on pushes, then pushes the changes.
-`.github/workflows/cd.yml`
+`.github/workflows/ci.yml`
 ```yml
-name: CD
+name: CI
 on:
   push:
     branches: main
