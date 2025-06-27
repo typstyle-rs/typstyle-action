@@ -26,7 +26,7 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
     - name: Run typstyle
-      uses: grayespinoza/typstyle-action@main
+      uses: typstyle-rs/typstyle-action@main
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:
@@ -34,7 +34,7 @@ jobs:
 ```
 
 ## Reporting Issues
-Please use [GitHub Issues](https://github.com/grayespinoza/typstyle-action/issues) to report bugs, crashes, and other issues.
+Please use [GitHub Issues](https://github.com/typstyle-rs/typstyle-action/issues) to report bugs, crashes, and other issues.
 
 ## License
-typstyle-action is under the [MIT License](https://github.com/grayespinoza/typstyle-action/blob/main/LICENSE).
+typstyle-action is under the [MIT License](https://github.com/typstyle-rs/typstyle-action/blob/main/LICENSE).
