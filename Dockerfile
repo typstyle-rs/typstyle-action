@@ -1,8 +1,8 @@
-FROM ubuntu:devel
+FROM rust:1.88-slim
 
-RUN apt-get update && apt-get install -y cargo && cargo install typstyle --locked
+RUN cargo install typstyle --locked
 
-ENV PATH /root/.cargo/bin:$PATH
+ENV PATH=/root/.cargo/bin:$PATH
 
 COPY entrypoint.sh .
 
