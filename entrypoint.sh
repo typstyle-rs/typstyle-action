@@ -1,5 +1,5 @@
-#!/bin/sh -eu
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
 
-find $INPUT_INPUTS -name "*.typ" | xargs -r typstyle $INPUT_OPTS
-
-exit 0
+find "$INPUT_INPUTS" -name "*.typ" | xargs -r typstyle $INPUT_OPTS

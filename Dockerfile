@@ -1,7 +1,15 @@
-FROM alpine:3.23
+FROM alpine:3.23.4
 
-ADD --chmod=755 https://github.com/typstyle-rs/typstyle/releases/latest/download/typstyle-x86_64-unknown-linux-musl /usr/local/bin/typstyle
+ARG TYPSTYLE_VERSION=v0.14.4
 
-COPY entrypoint.sh .
+RUN apk add --no-cache curl bash
 
+RUN \
+  curl -fsSL -o \
+    /usr/local/bin/typstyle \
+    https://github.com/typstyle-rs/typstyle/releases/download/${TYPSTYLE_VERSION}/typstyle-x86_64-unknown-linux-musl && \
+  chmod +x /usr/local/bin/typstyle
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
