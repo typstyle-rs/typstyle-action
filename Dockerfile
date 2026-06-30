@@ -1,6 +1,6 @@
 FROM alpine:3.23.4
 
-ARG TYPSTYLE_VERSION=v0.14.4
+ARG TYPSTYLE_VERSION=v0.15.0
 
 RUN apk add --no-cache curl bash
 

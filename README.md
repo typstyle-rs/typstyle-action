@@ -30,7 +30,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: Run typstyle
-        uses: typstyle-rs/typstyle-action@v1.0.0
+        uses: typstyle-rs/typstyle-action@v1.0.1
       - name: Push
         uses: stefanzweifel/git-auto-commit-action@v7.1.0
         with:
